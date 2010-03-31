@@ -1,8 +1,25 @@
+/*
+ * Copyright (C) 2010 DSF Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.doublesunflower.android.lockcast;
 
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
@@ -11,28 +28,26 @@ import java.util.TimeZone;
 //import com.google.android.maps.MapView;
 //import com.google.android.maps.MyLocationOverlay;
 import com.doublesunflower.android.lockcast.R;
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
+
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.location.LocationProvider;
+
 import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
-
-//import com.google.android.maps.GeoPoint;
-//import com.google.android.maps.MapActivity;
-//import com.google.android.maps.MapView;
-//import com.google.android.maps.MyLocationOverlay;
-
 
 
 public class GPSLoggerService extends Service {
