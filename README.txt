@@ -1,7 +1,4 @@
-this is the next commit
 
-
-LockCast Prototype
  ****************************************************************************
  * Copyright (C) 2008-2009 Double Sunflower Holdings Corp.                  *
  *                                                                          *

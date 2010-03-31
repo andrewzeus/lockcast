@@ -24,9 +24,6 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
-//import com.google.android.maps.GeoPoint;
-//import com.google.android.maps.MapView;
-//import com.google.android.maps.MyLocationOverlay;
 import com.doublesunflower.android.lockcast.R;
 
 import android.app.Notification;
@@ -46,6 +43,7 @@ import android.location.LocationProvider;
 import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
+
 import android.util.Log;
 import android.widget.Toast;
 
