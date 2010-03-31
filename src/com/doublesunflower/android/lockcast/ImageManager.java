@@ -21,6 +21,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,6 +37,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+
 import java.lang.ref.WeakReference;
 import java.net.URI;
 import java.util.ArrayList;
@@ -48,12 +50,13 @@ import java.util.ArrayList;
  * maintained by a single instance of the ImageManager class.
  */
 public class ImageManager {
-   private static final String TAG = "Panoramio";
+   private static final String TAG = "lockcast";
     
     /**
      * Base URL for Panoramio's web API
      */
-    private static final String THUMBNAIL_URL = "//www.panoramio.com/map/get_panoramas.php?order=popularity&set=public&from=0&to=20&miny=%f&minx=%f&maxy=%f&maxx=%f&size=thumbnail";
+    private static final String THUMBNAIL_URL = 
+    	"//www.panoramio.com/map/get_panoramas.php?order=popularity&set=public&from=0&to=20&miny=%f&minx=%f&maxy=%f&maxx=%f&size=thumbnail";
 
     /**
      * Used to post results back to the UI thread
