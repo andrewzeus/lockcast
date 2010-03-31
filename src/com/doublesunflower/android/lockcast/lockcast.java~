@@ -128,7 +128,11 @@ public class lockcast extends MapActivity {
         goButton.setOnClickListener(mSearchListener);
        
         // Add the map view to the frame
+<<<<<<< HEAD
         mMapView = new MapView(this, "0FkguPkCBiXmIbMlVvKQ_r9kpr_KckXncK6FBpg");
+=======
+        mMapView = new MapView(this, "0FkguPkCBiXnr0e5RwPKZe8B32pgattgZ7NTs1g");
+>>>>>>> 0791c298254e056e7b98d87cf479e27ff4fc049a
         frame.addView(mMapView, 
                 new FrameLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
 
