@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008 Google Inc.
+ * Copyright (C) 2010 DSF Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,21 +20,28 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+
 import android.content.DialogInterface;
 import android.content.Intent;
+
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+
 import android.media.MediaScannerConnection;
+
 import android.net.Uri;
+
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;

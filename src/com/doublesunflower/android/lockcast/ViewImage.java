@@ -130,10 +130,16 @@ public class ViewImage extends Activity {
         switch (item.getItemId()) {
         case MENU_RADAR: {
             // Launch the radar activity (if it is installed)
-            Intent i = new Intent("com.google.android.radar.SHOW_RADAR");
+            
+        	/*
+        	Intent i = new Intent("com.google.android.radar.SHOW_RADAR");
             GeoPoint location = mItem.getLocation();
             i.putExtra("latitude", (float)(location.getLatitudeE6() / 1000000f));
             i.putExtra("longitude", (float)(location.getLongitudeE6() / 1000000f));
+            */
+        	
+        	Intent i = new Intent(this, com.doublesunflower.android.lockcast.LolcatActivity.class);
+            
             try {
                 startActivity(i);
             } catch (ActivityNotFoundException ex) {

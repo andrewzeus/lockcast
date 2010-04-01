@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008 Google Inc.
+ * Copyright (C) 2008 DSF Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ import android.widget.ImageView;
  * image captions.
  */
 public class LolcatView extends ImageView {
-    private static final String TAG = "LolcatView";
+    private static final String TAG = "Hengx";
 
     // Standard lolcat size is 500x375.  (But to preserve the original
     // image's aspect ratio, we rescale so that the larger dimension ends
