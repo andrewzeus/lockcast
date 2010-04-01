@@ -71,7 +71,7 @@ import com.doublesunflower.android.lockcast.R;
 public class lockcast extends MapActivity {
 	
 	
-    private static final String tag = "Hengx";
+    private static final String tag = lockcast.class.getSimpleName();
 	private static final String tripFileName = "currentTrip.txt";
 	private String currentTripName = "";
 	private int altitudeCorrectionMeters = 20;
@@ -169,8 +169,7 @@ public class lockcast extends MapActivity {
 			//halfspan = Integer.parseInt(editHalfSpan.getText().toString());
 			halfspan = editHalfSpan.getText().toString();
         	
-			Intent i = new Intent(lockcast.this,
-                    GPSLoggerService.class);
+			Intent i = new Intent(lockcast.this, GPSLoggerService.class);
 	        i.putExtra(ImageManager.halfspan, halfspan);
 	        
 	        ImageManager.halfspan = halfspan;
