@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008 Google Inc.
+ * Copyright (C) 2010 DSF Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,6 +35,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -42,7 +43,7 @@ import android.widget.TextView;
  * Activity which displays a single image.
  */
 public class ViewImage extends Activity {
-    private static final String TAG = "Panoramio";
+    private static final String TAG = "lockcast";
 
     private static final int MENU_RADAR = Menu.FIRST + 1;
 
@@ -205,6 +206,7 @@ public class ViewImage extends Activity {
                 String uri = mItem.getThumbUrl();
                 uri = uri.replace("thumbnail", "medium");
                 final Bitmap b = BitmapUtils.loadBitmap(uri);
+                
                 mHandler.post(new Runnable() {
                     public void run() {
 

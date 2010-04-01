@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008 Google Inc.
+ * Copyright (C) 2010 DSF Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,9 @@ import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
+
 import android.os.Bundle;
+
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
@@ -62,7 +64,7 @@ public class ViewMap extends MapActivity {
         super.onCreate(savedInstanceState);
 
         FrameLayout frame = new FrameLayout(this);
-        mMapView = new MapView(this, "0FkguPkCBiXlTXj8-Bquu5nkHaucZrwmSFI0YLg");
+        mMapView = new MapView(this, "0FkguPkCBiXmIbMlVvKQ_r9kpr_KckXncK6FBpg");
         frame.addView(mMapView, 
                 new FrameLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
         setContentView(frame);
