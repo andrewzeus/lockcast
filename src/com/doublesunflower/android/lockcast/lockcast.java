@@ -128,7 +128,7 @@ public class lockcast extends MapActivity {
         goButton.setOnClickListener(mSearchListener);
        
         // Add the map view to the frame
-        mMapView = new MapView(this, "0FkguPkCBiXnr0e5RwPKZe8B32pgattgZ7NTs1g");
+        mMapView = new MapView(this, "0FkguPkCBiXmIbMlVvKQ_r9kpr_KckXncK6FBpg");
         frame.addView(mMapView, 
                 new FrameLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
 
@@ -185,9 +185,6 @@ public class lockcast extends MapActivity {
         {
             stopService(new Intent(lockcast.this,
                     GPSLoggerService.class));
-            
-            //Intent i = new Intent(lockcast.this, LolcatActivity.class);
-            //startActivity(i);
         }
     };
     
