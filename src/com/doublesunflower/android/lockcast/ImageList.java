@@ -204,7 +204,7 @@ public class ImageList extends ListActivity {
                     	
                     	if (mImageManager.size() > 0)
                     	{
-                    	/*
+                    	
                     		PanoramioItem item = mImageManager.get(0);  
                         	Intent i = new Intent(ImageList.this, ViewImage.class);
                         	i.putExtra(ImageManager.PANORAMIO_ITEM_EXTRA, item);
@@ -212,8 +212,8 @@ public class ImageList extends ListActivity {
                         	i.putExtra(ImageManager.LATITUDE_E6_EXTRA, mLatitudeE6);
                         	i.putExtra(ImageManager.LONGITUDE_E6_EXTRA, mLongitudeE6);
                         	startActivity(i);
-                    	 */
-                    		
+                    	 
+                    	/*	
                     		PanoramioItem item = mImageManager.get(0);  
                             Intent i = new Intent(ImageList.this, LolcatActivity.class);
                             i.putExtra(ImageManager.PANORAMIO_ITEM_EXTRA, item);
@@ -221,7 +221,8 @@ public class ImageList extends ListActivity {
                             i.putExtra(ImageManager.LATITUDE_E6_EXTRA, mLatitudeE6);
                             i.putExtra(ImageManager.LONGITUDE_E6_EXTRA, mLongitudeE6);
                             startActivity(i);
-                    		
+                        */
+                        	
                     	}
                     }
                 }, 1000);
