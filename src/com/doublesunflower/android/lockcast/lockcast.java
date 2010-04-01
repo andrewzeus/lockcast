@@ -71,7 +71,7 @@ import com.doublesunflower.android.lockcast.R;
 public class lockcast extends MapActivity {
 	
 	
-    private static final String tag = "hengx";
+    private static final String tag = "Hengx";
 	private static final String tripFileName = "currentTrip.txt";
 	private String currentTripName = "";
 	private int altitudeCorrectionMeters = 20;
