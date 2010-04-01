@@ -186,8 +186,8 @@ public class lockcast extends MapActivity {
             stopService(new Intent(lockcast.this,
                     GPSLoggerService.class));
             
-            Intent i = new Intent(lockcast.this, LolcatActivity.class);
-            startActivity(i);
+            //Intent i = new Intent(lockcast.this, LolcatActivity.class);
+            //startActivity(i);
         }
     };
     
@@ -310,22 +310,27 @@ public class lockcast extends MapActivity {
 			
 			altitudeCorrectionMeters = 20;
 			Log.i(tag, "altitude Correction updated to "+altitudeCorrectionMeters);
+			
 			db = openOrCreateDatabase(GPSLoggerService.DATABASE_NAME, SQLiteDatabase.OPEN_READWRITE, null);
 			cursor = db.rawQuery("SELECT * " +
                     " FROM " + GPSLoggerService.POINTS_TABLE_NAME +
                     " ORDER BY GMTTIMESTAMP ASC",
                     null);
-            int gmtTimestampColumnIndex = cursor.getColumnIndexOrThrow("GMTTIMESTAMP");
+            
+			int gmtTimestampColumnIndex = cursor.getColumnIndexOrThrow("GMTTIMESTAMP");
             int latitudeColumnIndex = cursor.getColumnIndexOrThrow("LATITUDE");
             int longitudeColumnIndex = cursor.getColumnIndexOrThrow("LONGITUDE");
             int altitudeColumnIndex = cursor.getColumnIndexOrThrow("ALTITUDE");
             int accuracyColumnIndex = cursor.getColumnIndexOrThrow("ACCURACY");
-			if (cursor.moveToFirst()) {
-				StringBuffer fileBuf = new StringBuffer();
+			
+            if (cursor.moveToFirst()) {
+				
+            	StringBuffer fileBuf = new StringBuffer();
 				String beginTimestamp = null;
 				String endTimestamp = null;
 				String gmtTimestamp = null;
 				initFileBuf(fileBuf, initValuesMap());
+				
 				do {
 					gmtTimestamp = cursor.getString(gmtTimestampColumnIndex);
 					if (beginTimestamp == null) {
@@ -337,6 +342,7 @@ public class lockcast extends MapActivity {
 					double accuracy = cursor.getDouble(accuracyColumnIndex);
 					fileBuf.append(sevenSigDigits.format(longitude)+","+sevenSigDigits.format(latitude)+","+altitude+"\n");
 				} while (cursor.moveToNext());
+				
 				endTimestamp = gmtTimestamp;
 				closeFileBuf(fileBuf, beginTimestamp, endTimestamp);
 				String fileContents = fileBuf.toString();
