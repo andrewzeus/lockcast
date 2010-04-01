@@ -64,7 +64,7 @@ public class ViewMap extends MapActivity {
         super.onCreate(savedInstanceState);
 
         FrameLayout frame = new FrameLayout(this);
-        mMapView = new MapView(this, "0FkguPkCBiXmIbMlVvKQ_r9kpr_KckXncK6FBpg");
+        mMapView = new MapView(this, "0FkguPkCBiXnr0e5RwPKZe8B32pgattgZ7NTs1g");
         frame.addView(mMapView, 
                 new FrameLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
         setContentView(frame);
