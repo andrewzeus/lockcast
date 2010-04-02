@@ -16,8 +16,6 @@
 
 package com.doublesunflower.android.lockcast;
 
-
-
 import com.google.android.maps.GeoPoint;
 
 import android.app.ListActivity;

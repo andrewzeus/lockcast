@@ -40,7 +40,7 @@ Instructions:
 
 
 v1.4.0.0
-fixed the sd card storage issue.
+fixed the sd card storage issue. added the first tag to the project in git.
 
 TODO / known bugs:
 

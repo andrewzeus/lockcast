@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008 Google Inc.
+ * Copyright (C) 2010 DSF Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,10 +23,12 @@ import android.util.Log;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
+
 import java.io.Closeable;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+
 import java.net.URL;
 
 /**
@@ -35,7 +37,7 @@ import java.net.URL;
  */
 public class BitmapUtils {
     
-    private static final String TAG = "Panoramio";
+    private static final String TAG = BitmapUtils.class.getSimpleName();
     
     private static final int IO_BUFFER_SIZE = 4 * 1024;
     
@@ -48,6 +50,7 @@ public class BitmapUtils {
      * @return The bitmap, or null if it could not be loaded
      */
     public static Bitmap loadBitmap(String url) {
+    	
         Bitmap bitmap = null;
         InputStream in = null;
         BufferedOutputStream out = null;
@@ -62,6 +65,7 @@ public class BitmapUtils {
 
             final byte[] data = dataStream.toByteArray();
             bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
+            
         } catch (IOException e) {
             Log.e(TAG, "Could not load Bitmap from: " + url);
         } finally {
