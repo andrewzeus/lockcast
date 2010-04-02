@@ -16,8 +16,6 @@
 
 package com.doublesunflower.android.lockcast;
 
-import com.google.android.maps.GeoPoint;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -43,37 +41,25 @@ import android.widget.TextView;
  * Activity which displays a single image.
  */
 public class ViewImage extends Activity {
-    private static final String TAG = "lockcast";
-
-    private static final int MENU_RADAR = Menu.FIRST + 1;
-
+	
+    private static final String TAG = ViewImage.class.getSimpleName();
+    private static final int MENU_LOL = Menu.FIRST + 1;
     private static final int MENU_MAP = Menu.FIRST + 2;
-
     private static final int MENU_AUTHOR = Menu.FIRST + 3;
-
     private static final int MENU_VIEW = Menu.FIRST + 4;
-
     private static final int MENU_STOP = Menu.FIRST + 5;
-    
-    
-    private static final int DIALOG_NO_RADAR = 1;
+    private static final int DIALOG_NO_LOL = 1;
 
     PanoramioItem mItem;
-
     private Handler mHandler;
-
-    private ImageView mImage;
-
-    private TextView mTitle;
-
-    private TextView mOwner;
     
+    private ImageView mImage;
+    private TextView mTitle;
+    private TextView mOwner;    
     private View mContent;
 
     private int mMapZoom;
-
     private int mMapLatitudeE6;
-
     private int mMapLongitudeE6;
 
     @Override
@@ -90,7 +76,7 @@ public class ViewImage extends Activity {
         mMapLongitudeE6 = i.getIntExtra(ImageManager.LONGITUDE_E6_EXTRA, Integer.MIN_VALUE);
         
         mHandler = new Handler();
-
+        
         mContent = findViewById(R.id.content);
         mImage = (ImageView) findViewById(R.id.image);
         mTitle = (TextView) findViewById(R.id.title);
@@ -107,9 +93,9 @@ public class ViewImage extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        menu.add(0, MENU_RADAR, 0, R.string.menu_radar)
-                .setIcon(R.drawable.ic_menu_radar)
-                .setAlphabeticShortcut('R');
+        menu.add(0, MENU_LOL, 0, R.string.menu_lol)
+                .setIcon(R.drawable.ic_menu_view)
+                .setAlphabeticShortcut('L');
         menu.add(0, MENU_MAP, 0, R.string.menu_map)
                 .setIcon(R.drawable.ic_menu_map)
                 .setAlphabeticShortcut('M');
@@ -128,22 +114,12 @@ public class ViewImage extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-        case MENU_RADAR: {
-            // Launch the radar activity (if it is installed)
-            
-        	/*
-        	Intent i = new Intent("com.google.android.radar.SHOW_RADAR");
-            GeoPoint location = mItem.getLocation();
-            i.putExtra("latitude", (float)(location.getLatitudeE6() / 1000000f));
-            i.putExtra("longitude", (float)(location.getLongitudeE6() / 1000000f));
-            */
-        	
-        	Intent i = new Intent(this, com.doublesunflower.android.lockcast.LolcatActivity.class);
-            
+        case MENU_LOL: {
+        	Intent i = new Intent(this, LolcatActivity.class);
             try {
                 startActivity(i);
             } catch (ActivityNotFoundException ex) {
-                showDialog(DIALOG_NO_RADAR);
+                showDialog(DIALOG_NO_LOL);
             }
             return true;
         }
@@ -186,10 +162,10 @@ public class ViewImage extends Activity {
     @Override
     protected Dialog onCreateDialog(int id) {
         switch (id) {
-        case DIALOG_NO_RADAR:
+        case DIALOG_NO_LOL:
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            return builder.setTitle(R.string.no_radar_title)
-                .setMessage(R.string.no_radar)
+            return builder.setTitle(R.string.no_lol_title)
+                .setMessage(R.string.no_lol)
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setPositiveButton(android.R.string.ok, null).create();
         }
@@ -211,6 +187,7 @@ public class ViewImage extends Activity {
             try {
                 String uri = mItem.getThumbUrl();
                 uri = uri.replace("thumbnail", "medium");
+                
                 final Bitmap b = BitmapUtils.loadBitmap(uri);
                 
                 mHandler.post(new Runnable() {

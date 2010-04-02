@@ -264,29 +264,6 @@ public class GPSLoggerService extends Service {
        
 	}
 	
-	public void loadSDImage(double latitude, double longitude) {
-	
-        int zoom = 22;
-        double double_latitudeE6 = latitude * MILLION;
-        double double_longitudeE6 = longitude * MILLION;
-        int latitudeE6 = (int)double_latitudeE6;
-        int longitudeE6 = (int)double_longitudeE6;
-        
-        Intent i = new Intent(this, LolcatActivity.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); 
-        
-        i.putExtra(ImageManager.ZOOM_EXTRA, zoom);
-        i.putExtra(ImageManager.LATITUDE_E6_EXTRA, latitudeE6);
-        i.putExtra(ImageManager.LONGITUDE_E6_EXTRA, longitudeE6);
-        
-        //float minLong = ((float) (longitudeE6 - intHalfSpan)) / MILLION;
-        //float maxLong = ((float) (longitudeE6 + intHalfSpan)) / MILLION;
-
-        //float minLat = ((float) (latitudeE6 - intHalfSpan)) / MILLION;
-        //float maxLat = ((float) (latitudeE6 + intHalfSpan)) / MILLION;
-        
-        startActivity(i);
-	}
 	
 
 	// Below is the service framework methods

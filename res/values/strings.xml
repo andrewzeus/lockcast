@@ -20,7 +20,7 @@
     <string name="go">Search lockcast </string>
     <string name="app_name">Lockcast</string>
 
-    <string name="menu_radar">LolActivity</string>
+    <string name="menu_lol">Lol</string>
     <string name="menu_map">Map</string>
     <string name="menu_author">Author info</string>
     <string name="menu_view">View on web</string>
@@ -28,10 +28,10 @@
   
     <string name="untitled">Untitled</string>  
     
-    <string name="no_radar_title">LolActivity not found</string>
-	<string name="no_radar">No LolActivity activity has been installed. Please download Radar from the Market.</string>
+    <string name="no_lol_title">Lol not found</string>
+	<string name="no_lol">No Lol has been installed. Please download lol from the Market.</string>
       
-    <string name="copyright">Photos provided by Panoramio are under the copyright of their owners.</string>   
+    <string name="copyright">Photos provided by lockcast are under the copyright of their owners.</string>   
 
     <string name="start">Start</string>
     <string name="stop">Stop</string>

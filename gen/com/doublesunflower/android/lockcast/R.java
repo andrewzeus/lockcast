@@ -128,12 +128,12 @@ containing a value of this type.
         public static final int lolcat_sendImage_label=0x7f040022;
         public static final int lolcat_share_failed=0x7f040020;
         public static final int menu_author=0x7f040004;
+        public static final int menu_lol=0x7f040002;
         public static final int menu_map=0x7f040003;
-        public static final int menu_radar=0x7f040002;
         public static final int menu_stop=0x7f040006;
         public static final int menu_view=0x7f040005;
-        public static final int no_radar=0x7f040009;
-        public static final int no_radar_title=0x7f040008;
+        public static final int no_lol=0x7f040009;
+        public static final int no_lol_title=0x7f040008;
         public static final int service_name=0x7f04000d;
         public static final int start=0x7f04000b;
         public static final int stop=0x7f04000c;

@@ -45,18 +45,13 @@ import java.util.List;
  * where the photo was taken.
  */
 public class ViewMap extends MapActivity {
+	
     private MapView mMapView;
-
     private MyLocationOverlay mMyLocationOverlay;
-
     ArrayList<PanoramioItem> mItems = null;
-
     private PanoramioItem mItem;
-
     private Drawable mMarker;
-
     private int mMarkerXOffset;
-
     private int mMarkerYOffset;
 
     @Override
@@ -66,10 +61,10 @@ public class ViewMap extends MapActivity {
         FrameLayout frame = new FrameLayout(this);
         
         //macbook
-        mMapView = new MapView(this, "0FkguPkCBiXnr0e5RwPKZe8B32pgattgZ7NTs1g");
+        //mMapView = new MapView(this, "0FkguPkCBiXnr0e5RwPKZe8B32pgattgZ7NTs1g");
         
         //Linux box
-        //mMapView = new MapView(this, "0FkguPkCBiXmIbMlVvKQ_r9kpr_KckXncK6FBpg");
+        mMapView = new MapView(this, "0FkguPkCBiXmIbMlVvKQ_r9kpr_KckXncK6FBpg");
         
         frame.addView(mMapView, 
                 new FrameLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));

@@ -31,7 +31,6 @@ import android.database.DataSetObserver;
 import android.graphics.Bitmap;
 import android.os.Handler;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -50,7 +49,8 @@ import java.util.ArrayList;
  * maintained by a single instance of the ImageManager class.
  */
 public class ImageManager {
-   private static final String TAG = "lockcast";
+	
+   private static final String TAG = ImageManager.class.getSimpleName();
     
     /**
      * Base URL for Panoramio's web API
@@ -170,19 +170,6 @@ public class ImageManager {
     }
     
     /**
-     * Load a new set of search results for the specified area.
-     * 
-     * @param minLong The minimum longitude for the search area
-     * @param maxLong The maximum longitude for the search area
-     * @param minLat The minimum latitude for the search area
-     * @param maxLat The minimum latitude for the search area
-     */
-    public void load(float minLong, float maxLong, float minLat, float maxLat) {
-        mLoading = true;
-        new NetworkThread(minLong, maxLong, minLat, maxLat).start();
-    }
-    
-    /**
      * Called when something changes in our data set. Cleans up any weak references that
      * are no longer valid along the way.
      */
@@ -200,6 +187,21 @@ public class ImageManager {
         }
         
     }
+    
+    /**
+     * Load a new set of search results for the specified area.
+     * 
+     * @param minLong The minimum longitude for the search area
+     * @param maxLong The maximum longitude for the search area
+     * @param minLat The minimum latitude for the search area
+     * @param maxLat The minimum latitude for the search area
+     */
+    public void load(float minLong, float maxLong, float minLat, float maxLat) {
+        mLoading = true;
+        new NetworkThread(minLong, maxLong, minLat, maxLat).start();
+    }
+    
+   
     
     /**
      * This thread does the actual work of downloading and parsing data.

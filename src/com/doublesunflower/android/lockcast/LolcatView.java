@@ -17,6 +17,7 @@
 package com.doublesunflower.android.lockcast;
 
 import android.content.Context;
+
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
@@ -25,10 +26,13 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
+
 import android.net.Uri;
 import android.text.TextUtils;
+
 import android.util.AttributeSet;
 import android.util.Log;
+
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
@@ -39,7 +43,7 @@ import android.widget.ImageView;
  * image captions.
  */
 public class LolcatView extends ImageView {
-    private static final String TAG = "Hengx";
+    private static final String TAG = LolcatView.class.getSimpleName();
 
     // Standard lolcat size is 500x375.  (But to preserve the original
     // image's aspect ratio, we rescale so that the larger dimension ends
