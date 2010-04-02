@@ -1,6 +1,6 @@
 
  ****************************************************************************
- * Copyright (C) 2008-2009 Double Sunflower Holdings Corp.                  *
+ * Copyright (C) 2010 Double Sunflower Holdings Corp.                  *
  *                                                                          *
  * Licensed under the Apache License, Version 2.0 (the "License");          *
  * you may not use this file except in compliance with the License.         *
@@ -20,15 +20,15 @@
 This project is intended to be a prototype for our LockCast project, a location-aware mobile advertising platform 
 based on Android. For latest releases, please visit http://www.51invent.com.
 
-v 1.1.0.0
+v1.1.0.0
 
 Based on Panoramio. No change from it on this version.
 
-v 1.2.0.0
+v1.2.0.0
 
 Added GPS service to it and will display loc-aware pics from Panoramio. 
 
-v 1.3.0.0
+v1.3.0.0
 
 Adding Lolcat SD read/write and camera capture capabilities into LockCast. 
 Instructions:
@@ -39,8 +39,8 @@ Instructions:
   (5) Save and share.
 
 
-v 1.4.0.0
-new change
+v1.4.0.0
+fixed the sd card storage issue.
 
 TODO / known bugs:
 
