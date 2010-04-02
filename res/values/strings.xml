@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
- * Copyright (C) 2008 Google Inc.
+ * Copyright (C) 2010 DSF Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,10 +17,10 @@
  */
 -->
 <resources>
-    <string name="go">Search Panoramio</string>
-    <string name="app_name">Panoramio</string>
+    <string name="go">Search lockcast </string>
+    <string name="app_name">Lockcast</string>
 
-    <string name="menu_radar">Radar</string>
+    <string name="menu_radar">LolActivity</string>
     <string name="menu_map">Map</string>
     <string name="menu_author">Author info</string>
     <string name="menu_view">View on web</string>
@@ -28,8 +28,8 @@
   
     <string name="untitled">Untitled</string>  
     
-    <string name="no_radar_title">Radar not found</string>
-	<string name="no_radar">No radar activity has been installed. Please download Radar from the Market.</string>
+    <string name="no_radar_title">LolActivity not found</string>
+	<string name="no_radar">No LolActivity activity has been installed. Please download Radar from the Market.</string>
       
     <string name="copyright">Photos provided by Panoramio are under the copyright of their owners.</string>   
 
@@ -59,7 +59,7 @@
     <string name="lolcat_scanning">Scanning...</string>
     <string name="lolcat_sendImage_label">Share picture via</string>
     <string name="lolcat_save_succeeded_dialog_title">Image saved!</string>
-    <string name="lolcat_save_succeeded_dialog_body_format">"Lolcat image successfully saved:\n  Filename: %s\n  Uri: %s"</string>
+    <string name="lolcat_save_succeeded_dialog_body_format">"Image successfully saved:\n  Filename: %s\n  Uri: %s"</string>
     <string name="lolcat_save_succeeded_dialog_view">View in gallery</string>
     <string name="lolcat_save_succeeded_dialog_share">Share</string>
     <string name="lolcat_save_succeeded_dialog_cancel">Cancel</string>

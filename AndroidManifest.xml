@@ -47,7 +47,8 @@
      	
 		<service android:name=".GPSLoggerService"
 			android:permission="android.permission.ACCESS_FINE_LOCATION"
-			android:label="@string/service_name" android:exported="true"
+			android:label="@string/service_name" 
+			android:exported="true"
 			android:enabled="true">
 		</service>
 			 	   
