@@ -297,9 +297,11 @@ public class lockcast extends MapActivity {
     
     
     private void doExport() {
+    	
 		// export the db contents to a kml file
 		SQLiteDatabase db = null;
 		Cursor cursor = null;
+		
 		try {
 			//EditText editAlt = (EditText)findViewById(R.id.EditTextAltitudeCorrection);
 			//altitudeCorrectionMeters = Integer.parseInt(editAlt.getText().toString());
@@ -343,6 +345,7 @@ public class lockcast extends MapActivity {
 				closeFileBuf(fileBuf, beginTimestamp, endTimestamp);
 				String fileContents = fileBuf.toString();
 				Log.d(tag, fileContents);
+				
 				File sdDir = new File("/sdcard/GPSLogger");
 				sdDir.mkdirs();
 				File file = new File("/sdcard/GPSLogger/"+currentTripName+".kml");
@@ -352,6 +355,7 @@ public class lockcast extends MapActivity {
     			Toast.makeText(getBaseContext(),
     					"Export completed!",
     					Toast.LENGTH_LONG).show();
+    			
 			} else {
 				Toast.makeText(getBaseContext(),
 						"I didn't find any location points in the database, so no KML file was exported.",
