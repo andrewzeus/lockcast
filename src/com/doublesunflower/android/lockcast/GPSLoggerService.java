@@ -130,7 +130,8 @@ public class GPSLoggerService extends Service {
 				
 				boolean pointIsRecorded = false;
 				try {
-					if (loc.hasAccuracy() && loc.getAccuracy() <= minAccuracyMeters) {
+					
+					//if (loc.hasAccuracy() && loc.getAccuracy() <= minAccuracyMeters) {
 						
 						pointIsRecorded = true;
 						GregorianCalendar greg = new GregorianCalendar();
@@ -152,7 +153,7 @@ public class GPSLoggerService extends Service {
 						
 						db = openOrCreateDatabase(DATABASE_NAME, SQLiteDatabase.OPEN_READWRITE, null);
 						db.execSQL(queryBuf.toString());
-					} 
+					//} 
 				} catch (Exception e) {
 					Log.e(tag, e.toString());
 				} finally {
